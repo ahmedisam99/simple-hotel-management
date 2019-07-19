@@ -134,6 +134,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Added by me
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentications', )
+    # 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated', )
+}
+
 AUTH_USER_MODEL = 'user.User'
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
