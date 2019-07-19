@@ -1,0 +1,16 @@
+autopep8==1.4.4
+certifi==2019.6.16
+chardet==3.0.4
+Django==2.2.3
+djangorestframework==3.10.1
+httpie==1.0.2
+idna==2.8
+mysqlclient==1.4.2.post1
+pycodestyle==2.5.0
+Pygments==2.4.2
+python-http-client==3.1.0
+pytz==2019.1
+requests==2.22.0
+sendgrid==6.0.5
+sqlparse==0.3.0
+urllib3==1.25.3
