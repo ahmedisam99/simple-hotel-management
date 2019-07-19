@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import (MinValueValidator, MaxLengthValidator)
+from django.core.validators import (MinValueValidator, MaxValueValidator)
 
 from user.models import User
 
@@ -25,6 +25,7 @@ class RoomType(models.Model):
 class Room(models.Model):
     room_number = models.CharField(max_length=3)
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
+    room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'Room {self.room_number} in Hotel {Hotel.objects.filter(id=self.hotel)}'
+        return f'{RoomType.objects.filter(id=self.room_type).name} Room {self.room_number} in Hotel {Hotel.objects.filter(id=self.hotel)}'
